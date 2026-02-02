@@ -5,7 +5,7 @@ This repository contains the source code and reproduction scripts for the paper 
 ## Repository Contents
 
 *   **`fenics_forward_poisson.py`**: Finite Element Method (FEM) forward solver implementing the Poisson equation for electrostatics in the brain. This script generates the ground-truth synthetic data used for training and validation.
-*   **`benchmark_pinns_only_v25.ipynb`**: The main Jupyter Notebook for the Physics-Informed Neural Network (PINN). It handles:
+*   **`model_pinns.ipynb`**: The main Jupyter Notebook for the Physics-Informed Neural Network (PINN). It handles:
     *   Loading the dataset.
     *   Defining the PINN architecture (Hybrid model with Maxwell's equations).
     *   Training the model.
@@ -25,7 +25,7 @@ This repository contains the source code and reproduction scripts for the paper 
 ## Reproduction Steps
 
 1.  **Generate Data**: Run `fenics_forward_poisson.py` to create the synthetic dataset (or use the provided `.npz` files if available).
-2.  **Train PINN**: Execute `benchmark_pinns_only_v25.ipynb` to train the neural network and assess its localization accuracy.
+2.  **Train PINN**: Execute `model_pinns.ipynb` to train the neural network and assess its localization accuracy.
 3.  **Run Benchmark**: Execute `benchmark_mne_batch.py` to calculate the MNE baseline performance.
     ```bash
     python benchmark_mne_batch.py
